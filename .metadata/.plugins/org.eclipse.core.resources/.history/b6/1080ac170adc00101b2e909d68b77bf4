@@ -1,0 +1,5 @@
+package layeredarchitecture.repository;
+
+public class UserRepository {
+
+}

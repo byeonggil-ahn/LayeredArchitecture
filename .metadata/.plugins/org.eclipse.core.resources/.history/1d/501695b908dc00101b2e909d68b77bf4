@@ -1,0 +1,25 @@
+package layeredarchitecture.service;
+
+/**
+* Service 구현체
+* - 비즈니스 로직 처리
+* - Repository 조합
+*/
+@Service
+public class UserServiceImpl implements UserService {
+
+
+private final UserRepository userRepository;
+
+
+public UserServiceImpl(UserRepository userRepository) {
+this.userRepository = userRepository;
+}
+
+
+@Override
+public User createUser(UserRequestDto dto) {
+User user = new User(1L, dto.getName());
+return userRepository.save(user);
+}
+}

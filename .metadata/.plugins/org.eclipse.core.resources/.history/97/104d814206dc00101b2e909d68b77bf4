@@ -1,0 +1,5 @@
+package layeredarchitecture.exception;
+
+public class BusinessException {
+
+}
